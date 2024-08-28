@@ -29,3 +29,12 @@ myapp:
   topics:
     groupId: order-group
     name: someTopic
+
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+      example:
+        orderservice: DEBUG
