@@ -2,19 +2,19 @@ spring:
   application:
     name: OrderService
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    password: password
-    username: postgres
+    url: jdbc:postgresql://${DATASOURCE_URI}:${DATASOURCE_PORT}/${DATASOURCE_DB}
+    password: ${DATASOURCE_PASSWORD}
+    username: ${DATASOURCE_USERNAME}
   security:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/api/certs
+          jwk-set-uri: http://${USERS_URI}/api/certs
 server:
   port: 8081
 
 user:
-  user-uri: http://localhost:8080/api/users/
+  user-uri: http://${USERS_URI}/api/users/
 
 hazelcast:
-  url: localhost:5701
+  url: ${HAZELCAST_URL}

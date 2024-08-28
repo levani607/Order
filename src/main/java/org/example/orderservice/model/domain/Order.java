@@ -15,7 +15,7 @@ import org.hibernate.type.SqlTypes;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(schema = "order_service", name = "order")
+@Table(schema = "order_service", name = "orders")
 public class Order {
 
     @Id
