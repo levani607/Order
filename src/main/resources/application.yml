@@ -14,10 +14,15 @@ server:
   port: 8081
 
 user:
-  user-uri: http://${USERS_URI}/api/users/
+  user-uri: http://User-app/api/users/
 
 hazelcast:
   url: ${HAZELCAST_URL}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761}/eureka/
 
 myapp:
   bootstrap-servers: ${KAFKA_URI}
