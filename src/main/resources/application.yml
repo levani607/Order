@@ -18,3 +18,9 @@ user:
 
 hazelcast:
   url: ${HAZELCAST_URL}
+
+myapp:
+  bootstrap-servers: ${KAFKA_URI}
+  topics:
+    groupId: order-group
+    name: someTopic
